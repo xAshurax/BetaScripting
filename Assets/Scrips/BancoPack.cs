@@ -40,7 +40,7 @@ public class BancoPack : MonoBehaviour
     public void DeliverPackage()
     {
         float reward;
-        reward = 10; //Dar datos
+        reward = Player.instance.Pack.BaseValue * 0.2f; ; //Dar datos
 
         Debug.Log("Entregue Paquete");
         DisplayUI.instance.AddScore(reward);

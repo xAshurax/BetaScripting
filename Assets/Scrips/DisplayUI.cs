@@ -53,7 +53,7 @@ public class DisplayUI : MonoBehaviour
             {
 
                 RestartMision();
-                AddScore(-15);
+                AddScore(-50);
             }
         } else
         {

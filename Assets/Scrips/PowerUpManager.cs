@@ -33,14 +33,14 @@ public class PowerUpManager : MonoBehaviour
    
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Shoot();
-        }
+    ////void Update()
+    ////{
+    ////    if (Input.GetButtonDown("Fire1"))
+    ////    {
+    ////        Shoot();
+    ////    }
         
-    }
+    ////}
 
     public IEnumerator Shot()
     {

@@ -49,15 +49,17 @@ public class Player : MonoBehaviour
 
     public void ModifyStats()
     {
-        if((instance.health <= 100)&&(instance.health>80)) { movement.Magnitude = inMag; movement.MagniRot = inMagRot;  }
-        if ((instance.health <= 80) && (instance.health > 60)) { movement.Magnitude = inMag-(decreaseMag); movement.MagniRot = inMagRot-(decreaseMagRot); }
-        if ((instance.health <= 60) && (instance.health > 40)) { movement.Magnitude = inMag - (decreaseMag*2); movement.MagniRot = inMagRot - (decreaseMagRot*2); }
-        if ((instance.health <= 40) && (instance.health > 20)) { movement.Magnitude = inMag - (decreaseMag*3); movement.MagniRot = inMagRot - (decreaseMagRot*3); }
-        if ((instance.health <= 20) && (instance.health > 0)) { movement.Magnitude = inMag - (decreaseMag*4); movement.MagniRot = inMagRot - (decreaseMagRot*4); }
-        if(instance.health <= 0) {
-
+        if((instance.health <= 100)&&(instance.health>80)) { movement.Magnitude = inMag; movement.MagniRot = inMagRot; MovementJoyStick.instance.speed = MovementJoyStick.instance.InSpeed; MovementJoyStick.instance.rotSpeed = MovementJoyStick.instance.InRotSpeed;  }
+        if ((instance.health <= 80) && (instance.health > 60)) { movement.Magnitude = inMag-(decreaseMag); movement.MagniRot = inMagRot-(decreaseMagRot); MovementJoyStick.instance.speed = MovementJoyStick.instance.InSpeed- (decreaseMag); MovementJoyStick.instance.rotSpeed = MovementJoyStick.instance.InRotSpeed- (decreaseMagRot); }
+        if ((instance.health <= 60) && (instance.health > 40)) { movement.Magnitude = inMag - (decreaseMag*2); movement.MagniRot = inMagRot - (decreaseMagRot*2);MovementJoyStick.instance.speed = MovementJoyStick.instance.InSpeed- (decreaseMag*2); MovementJoyStick.instance.rotSpeed = MovementJoyStick.instance.InRotSpeed- (decreaseMagRot*2); } 
+        if ((instance.health <= 40) && (instance.health > 20)) { movement.Magnitude = inMag - (decreaseMag*3); movement.MagniRot = inMagRot - (decreaseMagRot*3); MovementJoyStick.instance.speed = MovementJoyStick.instance.InSpeed - (decreaseMag*3); MovementJoyStick.instance.rotSpeed = MovementJoyStick.instance.InRotSpeed - (decreaseMagRot*3); }
+        if ((instance.health <= 20) && (instance.health > 0)) { movement.Magnitude = inMag - (decreaseMag*4); movement.MagniRot = inMagRot - (decreaseMagRot*4); MovementJoyStick.instance.speed = MovementJoyStick.instance.InSpeed - (decreaseMag*4); MovementJoyStick.instance.rotSpeed = MovementJoyStick.instance.InRotSpeed - (decreaseMagRot*4); }
+        if (instance.health <= 0) {
+            instance.health = 0;
             movement.Magnitude = 0; movement.MagniRot = 0;
-            LoseManaging.instane.Death();
+            MovementJoyStick.instance.speed = 0;
+            MovementJoyStick.instance.rotSpeed = 0;
+           LoseManaging.instane.Death();
 
         }
     }

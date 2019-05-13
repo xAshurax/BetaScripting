@@ -14,7 +14,7 @@ public class Misile : MonoBehaviour
         {
             AudioManager.instance.AudioBulletHit.Play();
 
-            collision.gameObject.GetComponent<Enemy>().Crash();
+            collision.gameObject.GetComponent<Enemy>().MissileHit();
             Rigidbody rigid = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 dir = collision.contacts[0].point - transform.position;
 

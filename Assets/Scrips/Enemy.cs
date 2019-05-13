@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public IEnumerator Crash()
+    public IEnumerator Crash(float _stun)
     {
         Debug.Log("Entramos a crash");
         AudioManager.instance.AudioCrash.Play();
@@ -80,10 +80,13 @@ public class Enemy : MonoBehaviour
         StopCoroutine(Move());
         walk = false;
         myAgent.enabled = false;
+        yield return new WaitForSeconds(0.3f);
+        GetComponent<Rigidbody>().useGravity = true;
 
 
-        yield return new WaitForSeconds(2f);
-        walk = true; 
+        yield return new WaitForSeconds(_stun);
+        walk = true;
+        GetComponent<Rigidbody>().useGravity = false;
         myAgent.enabled = true;
         StartCoroutine(Move());
     }
@@ -103,12 +106,17 @@ public class Enemy : MonoBehaviour
         if(objCollision.tag == "Player")
         {
             
-            StartCoroutine(Crash());
+            StartCoroutine(Crash(2));
             if(damage)
             {
                 damage = false;
                 StartCoroutine(Attack());
             }
         }
+    }
+    public void MissileHit()
+    {
+        StopCoroutine(Crash(2));
+        StartCoroutine(Crash(3f)); 
     }
 }
