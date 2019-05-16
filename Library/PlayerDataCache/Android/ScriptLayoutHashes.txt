@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/POWERCOM STORE/Desktop/TallerScripting/Beta/BetaMobile4.apk
+C:/Users/POWERCOM STORE/Desktop/TallerScripting/Beta/BetaMobilePresent.apk
 SceneListBegin?
 Assets/Scenes/MenuScene.unity
 Assets/Scenes/MainScene.unity
@@ -327,3 +327,9 @@ cd67f3e1e9ccac6db86c1564cea5a827 Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 69167579cf7fcbb2676fc1e675963dcd Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+9b86826f29aa2f0ea0449eb0988f1cf1 Assembly-CSharp.dll:.Arrow
+f8bd7a92bf9f22d289759689ae7b1fd4 Assembly-CSharp.dll:TurnTheGameOn.NPCChat.SmoothFollow
+b18f1f5690ed802d58cd7ead5c7fae0a Assembly-CSharp.dll:TurnTheGameOn.ArrowWaypointer.Waypoint
+9994064b90a7263d2e24e378cfba8db0 Assembly-CSharp.dll:TurnTheGameOn.ArrowWaypointer.WaypointController
+5e8a01a14cef8c5fb6866e39e13545df Assembly-CSharp.dll:.CharacterControllerThirdPerson
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UserControlThirdPerson
