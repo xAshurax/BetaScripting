@@ -15,6 +15,9 @@ public class PowerUpManager : MonoBehaviour
     [SerializeField]
     float bulletForce;
 
+    [SerializeField]
+    bool pc;
+
     private bool canShoot = true;
     private int bala;
 
@@ -33,14 +36,16 @@ public class PowerUpManager : MonoBehaviour
    
 
     // Update is called once per frame
-    ////void Update()
-    ////{
-    ////    if (Input.GetButtonDown("Fire1"))
-    ////    {
-    ////        Shoot();
-    ////    }
+    void Update()
+    {
+        if(pc) { 
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
+              }
         
-    ////}
+    }
 
     public IEnumerator Shot()
     {
